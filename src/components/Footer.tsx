@@ -1,27 +1,8 @@
 
 import { useEffect, useState } from "react";
 import { Facebook, Instagram, Twitter, Github, Eye } from "lucide-react";
-import VisitorCounter from "./VisitorCounter";
 
 const Footer = () => {
-  const [visitorCount, setVisitorCount] = useState<number>(0);
-
-  // Simple client-side visitor counter using localStorage
-  useEffect(() => {
-    try {
-      // Try to get the existing count from localStorage
-      const storedCount = localStorage.getItem("totalVisitors");
-      const count = storedCount ? parseInt(storedCount, 10) : 0;
-      
-      // Increment count and store back to localStorage
-      const newCount = count + 1;
-      localStorage.setItem("totalVisitors", newCount.toString());
-      setVisitorCount(newCount);
-    } catch (error) {
-      console.error("Error accessing localStorage:", error);
-      setVisitorCount(1); // Fallback
-    }
-  }, []);
 
   const currentYear = new Date().getFullYear();
 
@@ -77,10 +58,6 @@ const Footer = () => {
             </div>
             
             <div className="text-sm text-gray-600 flex flex-col sm:flex-row items-center">
-              <div className="visitor-counter mb-2 sm:mb-0 sm:mr-4 px-3 py-1 bg-gray-100 rounded-full flex items-center">
-                <Eye size={14} className="mr-1 text-blue-500" />
-                <span className="font-medium">{visitorCount}</span> visitors
-              </div>
               <p>© {currentYear} Your Name. All rights reserved.</p>
             </div>
           </div>
