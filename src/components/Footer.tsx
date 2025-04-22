@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl font-bold font-poppins mb-2">Your Name</h3>
-            <p className="text-gray-600 max-w-sm">
+            <p className="text-sm text-gray-600 flex flex-col sm:flex-row items-center">
               Sharing my journey, experiences, and insights with the world.
             </p>
           </div>
@@ -45,15 +45,6 @@ const Footer = () => {
               >
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
-              </a>
-              <a 
-                href="https://github.com/sanghu785" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-gray-600 hover:text-primary transition-colors"
-              >
-                <Github size={20} />
-                <span className="sr-only">Github</span>
               </a>
             </div>
             
