@@ -1,9 +1,7 @@
-
 import { useEffect, useState } from "react";
 import { Facebook, Instagram, Twitter, Github, Eye } from "lucide-react";
 
 const Footer = () => {
-
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,35 +17,35 @@ const Footer = () => {
 
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
-              <a 
-                href="https://instagram.com/sanghu785" 
-                target="_blank" 
+              <a
+                href="https://instagram.com/sanghu785"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
               >
                 <Instagram size={20} />
                 <span className="sr-only">Instagram</span>
               </a>
-              <a 
-                href="https://facebook.com/yourusername" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://facebook.com/yourusername"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
               >
                 <Facebook size={20} />
                 <span className="sr-only">Facebook</span>
               </a>
-              <a 
-                href="https://twitter.com/sanghu785" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://twitter.com/sanghu785"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-600 hover:text-primary transition-colors"
               >
                 <Twitter size={20} />
                 <span className="sr-only">Twitter</span>
               </a>
             </div>
-            
+
             <div className="text-sm text-gray-600 flex flex-col sm:flex-row items-center">
               <p>© {currentYear} Your Name. All rights reserved.</p>
             </div>

@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
@@ -22,7 +21,11 @@ const Header = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      if (isMobileMenuOpen && !target.closest("#mobile-menu") && !target.closest("#menu-button")) {
+      if (
+        isMobileMenuOpen &&
+        !target.closest("#mobile-menu") &&
+        !target.closest("#menu-button")
+      ) {
         setIsMobileMenuOpen(false);
       }
     };
@@ -34,8 +37,8 @@ const Header = () => {
   return (
     <header
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white bg-opacity-90 backdrop-blur-sm shadow-sm" 
+        isScrolled
+          ? "bg-white bg-opacity-90 backdrop-blur-sm shadow-sm"
           : "bg-transparent"
       }`}
     >
@@ -46,19 +49,34 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <Link to="/" className="font-medium hover:text-primary transition-colors">
+          <Link
+            to="/"
+            className="font-medium hover:text-primary transition-colors"
+          >
             Home
           </Link>
-          <a href="/#about" className="font-medium hover:text-primary transition-colors">
+          <a
+            href="/#about"
+            className="font-medium hover:text-primary transition-colors"
+          >
             About
           </a>
-          <a href="/#achievements" className="font-medium hover:text-primary transition-colors">
+          <a
+            href="#achievements"
+            className="font-medium hover:text-primary transition-colors"
+          >
             Achievements
           </a>
-          <a href="/#blog" className="font-medium hover:text-primary transition-colors">
-            Blog
+          <a
+            href="#skills"
+            className="font-medium hover:text-primary transition-colors"
+          >
+            Skills
           </a>
-          <a href="/#contact" className="font-medium hover:text-primary transition-colors">
+          <a
+            href="/#contact"
+            className="font-medium hover:text-primary transition-colors"
+          >
             Contact
           </a>
         </nav>
@@ -80,36 +98,36 @@ const Header = () => {
           className="md:hidden bg-white absolute w-full border-t border-gray-200 animate-fade-in"
         >
           <nav className="flex flex-col space-y-4 p-4">
-            <Link 
-              to="/" 
-              className="font-medium hover:text-primary transition-colors px-4 py-2" 
+            <Link
+              to="/"
+              className="font-medium hover:text-primary transition-colors px-4 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
-            <a 
-              href="/#about" 
+            <a
+              href="/#about"
               className="font-medium hover:text-primary transition-colors px-4 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
             </a>
-            <a 
-              href="/#achievements" 
+            <a
+              href="/#achievements"
               className="font-medium hover:text-primary transition-colors px-4 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Achievements
             </a>
-            <a 
-              href="/#blog" 
+            <a
+              href="/#skills"
               className="font-medium hover:text-primary transition-colors px-4 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Blog
+              Skills
             </a>
-            <a 
-              href="/#contact" 
+            <a
+              href="/#contact"
               className="font-medium hover:text-primary transition-colors px-4 py-2"
               onClick={() => setIsMobileMenuOpen(false)}
             >
